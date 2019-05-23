@@ -1,0 +1,64 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=utf8">
+<title>Flawfinder Results</title>
+<meta name="author" content="David A. Wheeler">
+<meta name="keywords" lang="en" content="flawfinder results, security scan">
+</head>
+<body>
+<h1>Flawfinder Results</h1>
+Here are the security scan results from
+<a href="https://www.dwheeler.com/flawfinder">Flawfinder version 2.0.6</a>,
+(C) 2001-2017 <a href="https://www.dwheeler.com">David A. Wheeler</a>.
+Number of rules (primarily dangerous function names) in C/C++ ruleset: 223
+<p>
+Examining ../code/B.c <br>
+Examining ../code/A.c <br>
+Examining ../code/C.c <br>
+
+<h2>Final Results</h2>
+<ul>
+<li>../code/B.c:7: <b>  [1] </b> (buffer) <i> read:
+  Check buffer boundaries if used in a loop including recursive loops (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>, <a
+  href="https://cwe.mitre.org/data/definitions/20.html">CWE-20</a>). </i>
+<li>../code/B.c:12: <b>  [1] </b> (buffer) <i> read:
+  Check buffer boundaries if used in a loop including recursive loops (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>, <a
+  href="https://cwe.mitre.org/data/definitions/20.html">CWE-20</a>). </i>
+<li>../code/C.c:7: <b>  [1] </b> (buffer) <i> read:
+  Check buffer boundaries if used in a loop including recursive loops (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>, <a
+  href="https://cwe.mitre.org/data/definitions/20.html">CWE-20</a>). </i>
+<li>../code/C.c:9: <b>  [1] </b> (buffer) <i> read:
+  Check buffer boundaries if used in a loop including recursive loops (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>, <a
+  href="https://cwe.mitre.org/data/definitions/20.html">CWE-20</a>). </i>
+<li>../code/A.c:18: <b>  [0] </b> (format) <i> printf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (<a href="https://cwe.mitre.org/data/definitions/134.html">CWE-134</a>).
+  Use a constant for the format specification. Constant format string, so not
+  considered risky. </i>
+</ul>
+<h2>Analysis Summary</h2>
+<p>
+Hits = 5
+<br>
+Lines analyzed = 43 in approximately 0.01 seconds (4975 lines/second)
+<br>
+Physical Source Lines of Code (SLOC) = 34
+<br>
+Hits@level = [0]   1 [1]   4 [2]   0 [3]   0 [4]   0 [5]   0 <br>
+Hits@level+ = [0+]   5 [1+]   4 [2+]   0 [3+]   0 [4+]   0 [5+]   0 <br>
+Hits/KSLOC@level+ = [0+] 147.059 [1+] 117.647 [2+]   0 [3+]   0 [4+]   0 [5+]   0 <br>
+Minimum risk level = 0
+<br>
+Not every hit is necessarily a security vulnerability.
+<br>
+There may be other security vulnerabilities; review your code!
+<br>
+See '<a href="https://www.dwheeler.com/secure-programs">Secure Programming HOWTO</a>'
+(<a href="https://www.dwheeler.com/secure-programs">https://www.dwheeler.com/secure-programs</a>) for more information.
+</body>
+</html>
